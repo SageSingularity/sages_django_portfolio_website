@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Blogs</title>
+    <link rel="stylesheet" href="{% static 'blog/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/styles/all-blogs.css' %}">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <a href="/blog" id="main-logo">Sage's Blogs</a>
+            <h1>My Blogs</h1>
+            <p>Where I share what I learn!</p>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Blogs</h2>
+            <ol>
+                {% for blog in blogs %}
+                    <li class="blog-item">
+                        <article>
+                            <div class="blog-summary">
+                                <div class="blog-image">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                            <div class="blog-details">
+                                <h3>{{ blog.title }}</h3>
+                                <p1>{{ blog.date }}</p1>
+                            </div>
+                            <div class="blog-actions">
+                                <a href="" class="btn">More Details</a>
+                            </div>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

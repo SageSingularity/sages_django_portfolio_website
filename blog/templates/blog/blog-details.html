@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ selected_blog.title }}</title>
+    <link rel="stylesheet" href="{% static 'blog/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/styles/blog-details.css' %}">
+</head>
+<body>
+    <article>
+        <img src="" alt="">
+
+        <section id="blog-summary">
+            <h2>Summary</h2>
+            <p>{{ selected_blog.summary }}</p>
+        </section>
+
+        <section id="blog-body">
+            <h2>Body</h2>
+            <p>{{ selected_blog.body }}</p>
+        </section>
+    </article>
+</body>
+</html>
